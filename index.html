@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <!-- Simple header -->
+  <header class="container">
+    <h1>Task Manager</h1>
+    <p class="muted">Flask + Vanilla JS. Add, toggle, edit, delete tasks.</p>
+  </header>
+
+  <!-- Toast/notice area -->
+  <div id="toast" class="toast hidden"></div>
+
+  <!-- Add task form -->
+  <section class="container card">
+    <form id="add-form">
+      <input id="title-input" type="text" placeholder="New task title" required />
+      <button type="submit">Add Task</button>
+    </form>
+  </section>
+
+  <!-- Task list -->
+  <section class="container card">
+    <div class="list-header">
+      <h2>Tasks</h2>
+      <button id="reload-btn" class="secondary">Reload</button>
+    </div>
+    <div id="loading" class="muted">Loading...</div>
+    <ul id="task-list"></ul>
+  </section>
+
+  <footer class="container small muted">
+    <p>Tip: On Vercel, API is same origin. For local dev, see comment in <code>app.js</code> about <code>API_BASE</code>.</p>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>
